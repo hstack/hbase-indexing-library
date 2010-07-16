@@ -51,7 +51,7 @@ public class Index {
 
   private static final byte[] EMPTY_BYTE_ARRAY = new byte[0];
 
-  protected Index(HTable htable, IndexDefinition definition) {
+  public Index(HTable htable, IndexDefinition definition) {
     this.htable = htable;
     this.definition = definition;
   }
