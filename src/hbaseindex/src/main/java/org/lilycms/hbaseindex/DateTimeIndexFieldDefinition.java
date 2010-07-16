@@ -32,7 +32,7 @@ import java.util.*;
  */
 public class DateTimeIndexFieldDefinition  extends IndexFieldDefinition {
     public enum Precision {DATETIME, DATETIME_NOMILLIS, DATE, TIME, TIME_NOMILLIS}
-    private Precision precision = Precision.DATETIME_NOMILLIS;
+    private Precision precision = Precision.DATETIME;
 
     public DateTimeIndexFieldDefinition(String name) {
         super(name, IndexValueType.DATETIME);
