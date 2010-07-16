@@ -45,8 +45,8 @@ public class IndexManager {
   private HBaseAdmin hbaseAdmin;
   private String metaTableName;
   private String dataTableName;
-  private HTable metaTable;
-  private HTable dataTable;
+  public HTable metaTable;
+  public HTable dataTable;
   
   public static final String DEFAULT_META_TABLE = "indexmeta";
   public static final String DEFAULT_DATA_TABLE = "indexdata";

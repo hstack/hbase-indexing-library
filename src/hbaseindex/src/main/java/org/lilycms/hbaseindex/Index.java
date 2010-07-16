@@ -56,6 +56,14 @@ public class Index {
     this.definition = definition;
   }
 
+  public IndexDefinition getDefinition() {
+    return definition;
+  }
+
+  public HTable getTable() {
+    return htable;
+  }
+
   /**
    * Adds an entry to this index. See {@link IndexEntry} for more information.
    *
@@ -130,7 +138,7 @@ public class Index {
    * <p>The field flags are currently used to mark if a field is null
    * or not. If a field is null, its value will be encoded as all-zero bits.
    */
-  private byte[] buildRowKey(IndexEntry entry, byte[] identifier) {
+  public byte[] buildRowKey(IndexEntry entry, byte[] identifier) {
     List<byte[]> keyComponents = new ArrayList<byte[]>();
 
     keyComponents.add(Bytes.toBytes(definition.getFullName()));
